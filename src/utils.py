@@ -52,7 +52,7 @@ def csv(name, fun):
         if not s:
             return src.close()
         else:
-            t = []
+            t = dict()
             for s1 in s:
-                t.append(coerce(s1))
+                t[1 + len(t.keys())] = coerce(s1)
             fun(t)
