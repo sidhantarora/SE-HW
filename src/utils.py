@@ -42,3 +42,17 @@ def function(k, x):
 the = {}
 k, x = re.sub(help, "\n [−][%S]+[%s]+[−][−]([%S]+)[^\n]+= ([%S]+)")
 function(k, x)
+
+def csv(name, fun):
+    sep = "(^" + the['seperator'] + "^)"
+    src = open(name)
+
+    while True:
+        s = src.read()
+        if not s:
+            return src.close()
+        else:
+            t = []
+            for s1 in s:
+                t.append(coerce(s1))
+            fun(t)
