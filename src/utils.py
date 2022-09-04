@@ -1,4 +1,5 @@
 import re
+import math
 
 help='''
     CSV : summarized csv file
@@ -14,6 +15,13 @@ help='''
     -S  --seperator feild seperator                       = ,
 '''  
 
+def percentile(data, percentile):
+    n = len(data)
+    p = n * percentile / 100
+    if p.is_integer():
+        return sorted(data)[int(p)]
+    else:
+        return sorted(data)[int(math.ceil(p)) - 1]
 
 def coerce(s):
     def fun(s1):

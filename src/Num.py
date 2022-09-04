@@ -2,6 +2,7 @@ import math
 from operator import truediv
 import sys
 import random
+import utils
 
 class Num:
     def __init__(self, pos=0, colName=""):
@@ -35,3 +36,13 @@ class Num:
         if not pos:
             self.is_sorted = False 
             self.has[pos] = number
+
+    def div(self, a):
+        a = self.nums()
+        stddev = float((utils.percentile(a,90) - utils.percentile(a,10))) / 2.58
+        return stddev
+
+    def mid(self):
+        return utils.percentile(self.nums(), 50)
+
+    
