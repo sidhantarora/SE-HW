@@ -1,5 +1,6 @@
 import re
 import math
+import os
 
 help='''
     CSV : summarized csv file
@@ -56,3 +57,15 @@ def csv(name, fun):
             for s1 in s:
                 t[1 + len(t.keys())] = coerce(s1)
             fun(t)
+
+def cli(t):
+    for key in t:
+        val = str(t[v])
+        for k in arg:
+            if arg[k] == "-" + key[1] or arg[k] == "--" + key:
+                val = (val == "false") and ("true") or (val == "true") and "false" arg[k + 1]
+        t[key] = coerce(v)
+    if t['help']:
+        print (help)
+        os._exit()
+    return t
