@@ -1,6 +1,8 @@
 import math
 from operator import truediv
 import sys
+import random
+
 class Num:
     def __init__(self, pos=0, colName=""):
         self.n = 0
@@ -17,3 +19,19 @@ class Num:
             self.has.sort()
             self.is_sorted = True
         return self.has
+
+    def add(self, number):
+        if number == '?':
+            return
+        number = float(number) or int(number)
+        self.n = self.n + 1
+        self.lo = min(number, self.lo)
+        self.hi = max(number, self.hi)
+        pos =  None
+        if len(self.has) < the["nums"]:
+            pos = 1 + len(self.has)
+        elif random.random() < the["nums"]/self.n:
+            pos = random.randint(0, len(self.has)-1)
+        if not pos:
+            self.is_sorted = False 
+            self.has[pos] = number
