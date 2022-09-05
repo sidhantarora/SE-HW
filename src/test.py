@@ -5,7 +5,7 @@ from utils import oo
 def test_sym():
     
     sym = Sym.Sym()
-    pairs = ["a", "a", "a", "b", "b", "c"]
+    pairs = ["a", "a", "a", "a", "b", "b", "c"]
     for x in pairs:
         sym.add(x)
     mode = sym.mid()
@@ -31,7 +31,7 @@ def bignum():
         num.add(i)
     # import pdb; pdb.set_trace()
     oo(num.nums())
-    print(len(num.has))
+    # print(len(num.has))
     return 32==len(num.has)
 
 def run_tests():
