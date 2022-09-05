@@ -7,17 +7,19 @@ class Sym:
         self.has = {}
 
     def add(self, symbol):
+        # import pdb; pdb.set_trace()
         if symbol == '?':
             return
         self.n = self.n + 1
-        if self.has[v]:
-            self.has[v] = self.has[v] + 1
+        if symbol in self.has:
+            self.has[symbol] = self.has[symbol] + 1
         else:
-            self.has[v] = 1
+            self.has[symbol] = 1
     
     def mid(self):
         most, mode = -1, 0
-        for k,v in self.has:
+        for k in self.has:
+            v = self.has[k]
             if v > most:
                 most = v
                 mode = k
@@ -25,7 +27,8 @@ class Sym:
 
     def div(self):
         e = 0
-        for k,v in self.has:
+        for k in self.has:
+            v = self.has[k]
             if v > 0:
                 e = e - self.helper(v/self.n)
         return e

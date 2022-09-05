@@ -28,9 +28,10 @@ def percentile(data, percentile):
         return ret
 
 def per(t, p):
-    interim_p = ((p or 0.5) * len(t)) + 0.5
+    import pdb; pdb.set_trace()
+    interim_p = (p / 100) * len(t)
     p = math.floor(interim_p)
-    ret = t[math.max(1, math.min(len(t), p))]
+    ret = t[max(1, min(len(t), p))]
     return ret
 
 def rnd(x, places):

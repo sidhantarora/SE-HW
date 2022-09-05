@@ -23,22 +23,26 @@ class Num:
         return self.has
 
     def add(self, number):
+        # import pdb; pdb.set_trace()
         if number == '?':
             return
         number = float(number) or int(number)
         self.n = self.n + 1
         self.lo = min(number, self.lo)
         self.hi = max(number, self.hi)
-        pos =  None
+        pos =  -1
+        x = random.random()
         if len(self.has) < self.nums_max:
-            pos = 1 + len(self.has)
-        elif random.random() < self.nums_max/self.n:
+            self.has.append(number)
+            self.has.sort()
+        elif x < self.nums_max/self.n:
             pos = random.randint(0, len(self.has)-1)
-        if not pos:
+
+        if pos != -1:
             self.is_sorted = False 
             self.has[pos] = number
 
-    def div(self, a):
+    def div(self):
         a = self.nums()
         stddev = float((utils.per(a,90) - utils.per(a,10))) / 2.58
         return stddev
