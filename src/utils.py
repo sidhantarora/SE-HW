@@ -63,8 +63,10 @@ def populate_the():
             flag = True
             continue
         if flag:
-            import pdb; pdb.set_trace()
+            # import pdb; pdb.set_trace()
             x = re.sub(' +', ' ', token.strip())
+            if x == '':
+                break
             val = x.split(' = ')[1]
             key = x.split(' = ')[0].split(' ')[1]
             the[key] = val

@@ -1,6 +1,10 @@
-import pytest
+import Sym
+import Num
+from utils import oo
+# import oo
 def test_sym():
-    sym = Sym()
+    import pdb; pdb.set_trace()
+    sym = Sym.Sym()
     pairs = ["a", "a", "a", "b", "b", "c"]
     for x in pairs:
         sym.add(x)
@@ -26,8 +30,9 @@ def bignum():
         num.add(i)
 
     num.nums = 32
-    oo(self.nums())
-
+    oo(num.nums())
     return 32==len(num.has)
+
+test_sym()
 
     
