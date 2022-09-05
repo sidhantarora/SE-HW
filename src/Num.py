@@ -39,10 +39,10 @@ class Num:
 
     def div(self, a):
         a = self.nums()
-        stddev = float((utils.percentile(a,90) - utils.percentile(a,10))) / 2.58
+        stddev = float((utils.per(a,90) - utils.per(a,10))) / 2.58
         return stddev
 
     def mid(self):
-        return utils.percentile(self.nums(), 50)
+        return utils.per(self.nums(), 50)
 
     

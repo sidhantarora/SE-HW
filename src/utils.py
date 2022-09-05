@@ -19,12 +19,24 @@ help='''
 '''  
 
 def percentile(data, percentile):
-    n = len(data)
-    p = n * percentile / 100
+    p = len(data) * percentile / 100
     if p.is_integer():
-        return sorted(data)[int(p)]
+        ret = sorted(data)[int(p)]
+        return ret
     else:
-        return sorted(data)[int(math.ceil(p)) - 1]
+        ret = sorted(data)[int(math.ceil(p)) - 1]
+        return ret
+
+def per(t, p):
+    interim_p = ((p or 0.5) * len(t)) + 0.5
+    p = math.floor(interim_p)
+    ret = t[math.max(1, math.min(len(t), p))]
+    return ret
+
+def rnd(x, places):
+    mult = 10**(places or 2)
+    ret = math.floor(x * mult + 0.5) / mult
+    return ret
 
 def coerce(s):
     def fun(s1):
