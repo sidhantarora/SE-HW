@@ -2,6 +2,8 @@ import re
 import math
 import os
 
+the = dict()
+
 help='''
     CSV : summarized csv file
     (c) 2022 Tim Menzies <timm@ieee.org> BSD-2 license
@@ -40,10 +42,29 @@ def function(k, x):
     the[k] = coerce(x)
     return the[k]
 
-the = {}
-k, x = re.sub(help, "\n [−][%S]+[%s]+[−][−]([%S]+)[^\n]+= ([%S]+)")
-function(k, x)
+# return the
+def populate_the():
+    tokens = help.split('\n')
+    flag = False
+    for token  in tokens:
+        if 'OPTIONS:' in token:
+            flag = True
+            continue
+        if flag:
+            import pdb; pdb.set_trace()
+            x = re.sub(' +', ' ', token.strip())
+            val = x.split(' = ')[1]
+            key = x.split(' = ')[0].split(' ')[1]
+            the[key] = val
+populate_the()
 
+def o(t):
+    print (t)
+
+def oo(t):
+    print(o(t))
+    return True
+    
 def csv(name, fun):
     sep = "(^" + the['seperator'] + "^)"
     src = open(name)
@@ -63,7 +84,7 @@ def cli(t):
         val = str(t[v])
         for k in arg:
             if arg[k] == "-" + key[1] or arg[k] == "--" + key:
-                val = (val == "false") and ("true") or (val == "true") and "false" arg[k + 1]
+                val = (val == "false") and ("true") or (val == "true") and "false" or arg[k + 1]
         t[key] = coerce(v)
     if t['help']:
         print (help)
