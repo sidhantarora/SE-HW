@@ -6,7 +6,7 @@ the = dict()
 
 help='''
     CSV : summarized csv file
-    USAGE: lua seen.lua [OPTIONS]
+    USAGE: python test.py [OPTIONS]
     OPTIONS:
     -e  --eg        start-up example                      = nothing
     -d  --dump      on test failure, exit with stack dump = false
@@ -16,7 +16,8 @@ help='''
     -s  --seed      random number seed                    = 10019
     -S  --seperator feild seperator                       = ,
 '''  
-
+#options usage yet to be implemented
+ 
 def percentile(data, percentile):
     p = len(data) * percentile / 100
     if p.is_integer():
