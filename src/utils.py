@@ -6,7 +6,6 @@ the = dict()
 
 help='''
     CSV : summarized csv file
-    (c) 2022 Tim Menzies <timm@ieee.org> BSD-2 license
     USAGE: lua seen.lua [OPTIONS]
     OPTIONS:
     -e  --eg        start-up example                      = nothing
@@ -28,7 +27,7 @@ def percentile(data, percentile):
         return ret
 
 def per(t, p):
-    import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
     interim_p = (p / 100) * len(t)
     p = math.floor(interim_p)
     ret = t[max(1, min(len(t), p))]

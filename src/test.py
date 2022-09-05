@@ -29,7 +29,7 @@ def bignum():
     num.nums_max = 32
     for i in range(1, 1000):
         num.add(i)
-    import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
     oo(num.nums())
     return 32==len(num.has)
 
