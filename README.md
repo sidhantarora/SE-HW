@@ -5,7 +5,7 @@ Contributors:
 - Sravanth Reddy Bomanna
 - Akash Sarda
 - Sidhant Arora
-- Aravind Subhramanium
+- Arvind Srinivas Subramanian
 
 Classes Implemented:
 - Sym : class to calculate mid (mode in symbolic data) and div for symbolic data
