@@ -18,6 +18,7 @@ help='''
 '''  
 #options usage yet to be implemented
  
+# Usual percentile implmentation - Different from the one in Lua code
 def percentile(data, percentile):
     p = len(data) * percentile / 100
     if p.is_integer():
@@ -27,8 +28,8 @@ def percentile(data, percentile):
         ret = sorted(data)[int(math.ceil(p)) - 1]
         return ret
 
+# Percentile implemntation from the lua code
 def per(t, p):
-    # import pdb; pdb.set_trace()
     interim_p = (p / 100) * len(t)
     p = math.floor(interim_p)
     ret = t[max(1, min(len(t), p))]
