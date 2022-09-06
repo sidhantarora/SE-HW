@@ -71,6 +71,7 @@ def populate_the():
             val = x.split(' = ')[1]
             key = x.split(' = ')[0].split(' ')[1]
             the[key] = val
+    return the
 populate_the()
 
 def o(t):

@@ -1,7 +1,12 @@
 import Sym
 import Num
-from utils import oo
+from utils import oo, populate_the
 # import oo
+
+def test_the(the):
+    oo(the)
+    return True
+
 def test_sym():
     
     sym = Sym.Sym()
@@ -34,23 +39,29 @@ def bignum():
     # print(len(num.has))
     return 32==len(num.has)
 
-def run_tests():
+def run_tests(the):
     test_case_num =1 
     val = bignum()
-    if val: print("TestCase "+str(test_case_num)+" Passed")
+    if val: print("TestCase "+str(test_case_num)+" bignum Passed")
     else: print("TestCase "+str(test_case_num)+" Failed")
     test_case_num+=1
     val = test_num()
-    if val: print("TestCase "+str(test_case_num)+" Passed")
+    if val: print("TestCase "+str(test_case_num)+" test_num Passed")
     else: print("TestCase "+str(test_case_num)+" Failed")
     test_case_num+=1
     val = test_sym()
-    if val: print("TestCase "+str(test_case_num)+" Passed")
+    if val: print("TestCase "+str(test_case_num)+" test_sym Passed")
+    else: print("TestCase "+str(test_case_num)+" Failed")
+    test_case_num += 1
+    val = test_the(the)
+    if val: print("TestCase "+str(test_case_num)+" test_the Passed")
     else: print("TestCase "+str(test_case_num)+" Failed")
 
 
 if __name__=="__main__":
-    run_tests()
+    import pdb; pdb.set_trace()
+    the = populate_the()
+    run_tests(the)
 
 
     
