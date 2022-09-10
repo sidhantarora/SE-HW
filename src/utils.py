@@ -1,6 +1,7 @@
 import re
 import math
 import os
+import copy
 
 the = dict()
 
@@ -113,3 +114,11 @@ def cli(t):
         print (help)
         os._exit()
     return t
+
+def copy(t):
+    if type(t) is not dict:
+        return t
+    u={}
+    for key, value in t.items():
+        u[key] = copy(value)
+    return u
