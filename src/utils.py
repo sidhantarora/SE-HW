@@ -82,18 +82,24 @@ def oo(t):
     print(o(t))
     return True
     
-def csv(name, fun):
-    sep = "(^" + the['seperator'] + "^)"
-    src = open(name)
 
-    while True:
-        s = src.read()
-        if not s:
-            return src.close()
-        else:
-            t = dict()
-            for s1 in s:
-                t[1 + len(t.keys())] = coerce(s1)
+def csv(fname, fun, sep=','):
+    # Open the file
+    sep = the.seperator
+    file1 = open(fname, 'r')
+
+    # Read all the lines in the file sepearted by \n
+    lines = file1.readlines()
+
+    # Loop through each line and split each line
+    # using the seprator defined previously
+    for line in lines:
+        t = {}
+        splitLine = line.split(sep)
+
+        # store it in the dict t
+        for word in splitLine:
+            t[1 + len(t.keys())] = coerce(word)
             fun(t)
 
 def cli(t):
