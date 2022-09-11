@@ -28,5 +28,3 @@ class Cols:
                 
                 if re.match("!$",col_name):
                     self.klass = obj
-
-                
