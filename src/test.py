@@ -43,7 +43,7 @@ def func2(col):
     return col.mid()
 
 def test_stats():
-    data = Data("../data/auto93.csv")
+    data = Data.Data("../data/auto93.csv")
     print("xmid", data.stats(2, data.cols.x, func2))
     print("xdiv", data.stats(3,data.cols.x, func1))
     print("ymid", data.stats(2,data.cols.y, func2))
