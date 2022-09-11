@@ -2,6 +2,7 @@ import re
 import math
 import os
 import copy
+import sys
 
 the = dict()
 
@@ -103,15 +104,34 @@ def csv(fname, fun, sep=','):
             t[1 + len(t.keys())] = coerce(word)
             fun(t)
 
+def iItems(dictVar):
+    tempDict = {}
+    dictPairs = dictVar.items()
+    for dictPair in dictPairs:
+        if(isinstance(dictPair[0], int)):
+            tempDict[dictPair[0]] = dictPair[1]
+        elif(isinstance(dictPair[0], float)):
+            break
+    return tempDict.items()
+
+def getArgs():
+    arguments = sys.argv
+    i = 0
+    argDict = {}
+    for sArgv in arguments:
+        argDict[i] = sArgv
+        i = i +1
+
 def cli(t):
-    for key in t:
-        val = str(t[v])
-        for k in arg:
-            if arg[k] == "-" + key[1] or arg[k] == "--" + key:
-                val = (val == "false") and ("true") or (val == "true") and "false" or arg[k + 1]
-        t[key] = coerce(v)
+    args = getArgs()
+    for slot,v in t.items():
+        v = str(v)
+        for n,x in iItems(args):
+            if ((x == '-' + slot[1:1]) or (x == '--' + slot)):
+                v = (v=='false') and ('true') or (v=='true') and 'false' or args[n+1]
+        t[slot] = coerce(v)
     if t['help']:
-        print (help)
+        print(help)
         os._exit()
     return t
 
