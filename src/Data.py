@@ -1,6 +1,6 @@
 import csv
 import Cols
-import rnd
+import utils
 import Row
 
 class Data:
@@ -8,7 +8,7 @@ class Data:
         self.cols = None
         self.rows = []
 
-        if type(src) == type("xyz"):
+        if type(src) is str:
             csv(src, lambda row : self.add(row))
         else:
             for row in src:
@@ -36,7 +36,7 @@ class Data:
         x = False
         for col in sc:
             v = func(col)
-            if type(v) == type(1) and rnd(v, places):
+            if type(v) == type(1) and utils.rnd(v, places):
                 x = True
                 t[col.name] = x
             else:
