@@ -1,6 +1,7 @@
 import csv
 import Cols
 import rnd
+import Row
 
 class Data:
     def __init__(self, src) -> None:
@@ -16,9 +17,14 @@ class Data:
     def add(self, row):
         if not self.cols:
             self.cols = Cols(row)
-        for todo in self.cols.data:
-            for col in todo:
-                col.add(row.cells[col.at])
+        else:
+            if row.cells:
+                self.rows.append(row.cells)
+            else:
+                self.rows.append(Row(row))
+            for todo in self.cols:
+                for col in todo:
+                    col.add(row.cells[col.at])
 
     def stats(self, places, showCols, func):
         sc = None
