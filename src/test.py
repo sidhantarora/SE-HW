@@ -2,6 +2,7 @@ import Sym
 import Num
 from utils import oo, populate_the
 import Data
+import os
 # import oo
 
 def test_the(the):
@@ -43,7 +44,8 @@ def func2(col):
     return col.mid()
 
 def test_stats():
-    data = Data.Data("../data/auto93.csv")
+    path = os.path.join(os.path.dirname(__file__), '..', 'data', 'auto93.csv')
+    data = Data.Data(path)
     print("xmid", data.stats(2, data.cols.x, func2))
     print("xdiv", data.stats(3,data.cols.x, func1))
     print("ymid", data.stats(2,data.cols.y, func2))

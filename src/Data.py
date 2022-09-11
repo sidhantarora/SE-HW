@@ -1,4 +1,3 @@
-import csv
 import Cols
 import utils
 import Row
@@ -6,22 +5,22 @@ import Row
 class Data:
     def __init__(self, src) -> None:
         self.cols = None
-        self.rows = []
+        self.rows = {}
 
         if type(src) is str:
-            csv(src, lambda row : self.add(row))
+            utils.csv(src, lambda row : self.add(row))
         else:
             for row in src:
                 self.add(row)
     
     def add(self, row):
         if not self.cols:
-            self.cols = Cols(row)
+            self.cols = Cols.Cols(row)
         else:
             if row.cells:
-                self.rows.append(row.cells)
+                self.rows.add(row.cells)
             else:
-                self.rows.append(Row(row))
+                self.rows.add(Row.Row(row))
             for todo in self.cols:
                 for col in todo:
                     col.add(row.cells[col.at])

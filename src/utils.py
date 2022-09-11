@@ -90,7 +90,7 @@ def populate_the():
             the[key] = val
     return the
 populate_the()
-
+print(the)
 def o(t):
     print (t)
 
@@ -101,7 +101,7 @@ def oo(t):
 
 def csv(fname, fun, sep=','):
     # Open the file
-    sep = the['seperator']
+    sep = the['--seperator']
     file1 = open(fname, 'r')
 
     # Read all the lines in the file sepearted by \n
