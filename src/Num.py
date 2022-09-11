@@ -33,8 +33,8 @@ class Num:
         pos =  -1
         x = random.random()
         if len(self.has) < self.nums_max:
+            pos = len(self.has)
             self.has.append(number)
-            self.has.sort()
         elif x < self.nums_max/self.n:
             pos = random.randint(0, len(self.has)-1)
 
