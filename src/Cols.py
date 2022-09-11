@@ -10,7 +10,8 @@ class Cols:
         self.x = []
         self.y = []
 
-        for key,col_name in names:
+        key = 0
+        for col_name in names:
             obj = {}
             if re.match("^[A-Z]*",col_name):
                 obj = Num(key,col_name)
@@ -28,3 +29,4 @@ class Cols:
                 
                 if re.match("!$",col_name):
                     self.klass = obj
+            key+=1

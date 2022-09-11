@@ -49,10 +49,10 @@ def coerce(s):
         if s1=="false":
             return False
         return s1
-    try:
-        return int(s) or float(s) or fun(re.match(s, "^%s*(.−)%s*$"))
-    except RuntimeError as e:
-        return None
+    if re.match(r'^-?\d+(?:\.\d+)$', s):
+        return float(s)
+    else:
+        return fun(s)
 
 def function(k, x):
     the[k] = coerce(x)
@@ -101,6 +101,7 @@ def csv(fname, fun, sep=','):
 
         # store it in the dict t
         for word in splitLine:
+            print(word)
             t[1 + len(t.keys())] = coerce(word)
             fun(t)
 
