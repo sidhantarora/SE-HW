@@ -42,6 +42,20 @@ def rnd(x, places):
     ret = math.floor(x * mult + 0.5) / mult
     return ret
 
+def safeInt(s):
+    try:
+        sInt =  int(s)
+        return sInt
+    except:
+        return False
+
+def safeFloat(s):
+    try:
+        sFloat = float(s)
+        return sFloat
+    except:
+        return False
+
 def coerce(s):
     def fun(s1):
         if s1=="true":
@@ -50,7 +64,7 @@ def coerce(s):
             return False
         return s1
     try:
-        return int(s) or float(s) or fun(re.match(s, "^%s*(.−)%s*$"))
+        return safeInt(s) or safeFloat(s) or fun(re.match(s, "^%s*(.−)%s*$"))
     except RuntimeError as e:
         return None
 
