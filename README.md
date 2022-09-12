@@ -27,5 +27,5 @@ Tests Implemented:
 
 # How to run the tests?
 
-in the src folder, run python3 tests.py
+in the root folder, run python3 -m test.test_csv
 
