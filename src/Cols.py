@@ -10,23 +10,26 @@ class Cols:
         self.x = []
         self.y = []
 
+        import pdb; pdb.set_trace()
+
         key = 0
-        for col_name in names:
+        for key in names:
             obj = {}
-            if re.match("^[A-Z]*",col_name):
-                obj = Num(key,col_name)
+            col_name = names[key]
+            if re.match("^[A-Z]",col_name):
+                obj = Num.Num(key,col_name)
                 self.all.append(obj)
             else:
-                obj = Sym(key,col_name)
+                obj = Sym.Sym(key,col_name)
                 self.all.append(obj)
             
-            if not re.match(":$",col_name):
-                is_dependent = re.match("[!+-]]",col_name)
+            if not col_name.endswith(":"):
+                is_dependent = col_name.endswith("+") or col_name.endswith("-")
                 if is_dependent:
                     self.y.append(obj)
                 else:
                     self.x.append(obj)
-                
-                if re.match("!$",col_name):
+                if col_name.endswith("!"):
                     self.klass = obj
             key+=1
+        # import pdb; pdb.set_trace()

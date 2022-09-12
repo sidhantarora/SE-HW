@@ -52,11 +52,6 @@ def test_stats():
     print("ydiv", data.stats(3,data.cols.y, func1))
     return True
 
-
-def test_the():
-    oo(the)
-    return True
-
 def run_tests(the):
     test_results = []
     passed_results = 0
@@ -113,7 +108,8 @@ def run_tests(the):
 
 if __name__=="__main__":
     the = populate_the()
-    run_tests(the)
+    # run_tests(the)
+    test_stats()
 
 
 

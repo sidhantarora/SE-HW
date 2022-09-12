@@ -15,9 +15,9 @@ class Data:
     
     def add(self, row):
         if not self.cols:
-            self.cols = Cols.Cols(row)
+            self.cols = [Cols.Cols(row)]
         else:
-            if row.cells:
+            if type(row) == Row.Row:
                 self.rows.append(row.cells)
             else:
                 self.rows.append(Row.Row(row))

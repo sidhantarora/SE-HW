@@ -67,7 +67,6 @@ def populate_the():
             flag = True
             continue
         if flag:
-            # import pdb; pdb.set_trace()
             x = re.sub(' +', ' ', token.strip())
             if x == '':
                 break
@@ -92,18 +91,18 @@ def csv(fname, fun, sep=','):
 
     # Read all the lines in the file sepearted by \n
     lines = file1.readlines()
-
+    import pdb; pdb.set_trace()
     # Loop through each line and split each line
     # using the seprator defined previously
     for line in lines:
         t = {}
+        line = line[:-1]
         splitLine = line.split(sep)
-
-        # store it in the dict t
         for word in splitLine:
             print(word)
             t[1 + len(t.keys())] = coerce(word)
-            fun(t)
+        import pdb; pdb.set_trace()
+        fun(t)
 
 def iItems(dictVar):
     tempDict = {}
