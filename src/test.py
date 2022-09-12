@@ -139,7 +139,7 @@ def run_tests(the):
 
 if __name__=="__main__":
     the = populate_the()
-    # run_tests(the)
+    run_tests(the)
     test_stats()
 
 
