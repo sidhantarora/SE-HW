@@ -65,6 +65,12 @@ def test_csv():
     utils.csv(path, func3); 
     return True
 
+def print_test_result(test_case_num, val, func_name):
+    if val: 
+        print("TestCase "+str(test_case_num)+" "+func_name +" Passed")
+    else: 
+        print("TestCase "+str(test_case_num)+" "+func_name +" Failed")
+
 def run_tests(the):
     test_results = []
     passed_results = 0
@@ -73,50 +79,44 @@ def run_tests(the):
     test_case_num =1 
     val = bignum()
     test_results.append(val)
-    if val: print("TestCase "+str(test_case_num)+" bignum Passed")
-    else: print("TestCase "+str(test_case_num)+" bignum Failed")
-    if val: print("TestCase "+str(test_case_num)+" bignum Passed")
-    else: print("TestCase "+str(test_case_num)+"bignum Failed")
+    
+    print_test_result(test_case_num, val, "bignum")
 
     test_case_num+=1
     val = test_num()
     test_results.append(val)
-    if val: print("TestCase "+str(test_case_num)+" test_num Passed")
-    else: print("TestCase "+str(test_case_num)+" test_num Failed")
+    print_test_result(test_case_num, val, "test_num")
 
     test_case_num+=1
     val = test_sym()
     test_results.append(val)
-    if val: print("TestCase "+str(test_case_num)+" test_sym Passed")
-    else: print("TestCase "+str(test_case_num)+" test_sym Failed")
+    print_test_result(test_case_num, val, "test_sym")
 
     test_case_num+=1
     val = test_the(the)
     test_results.append(val)
-    if val: print("TestCase "+str(test_case_num)+" test_the Passed")
-    else: print("TestCase "+str(test_case_num)+" test_the Failed")
+    print_test_result(test_case_num, val, "test_the")
 
 
     test_case_num+=1
     try:
         val = test_stats()
         test_results.append(val)
-        if val: print("TestCase "+str(test_case_num)+" test_num Passed")
-        else: print("TestCase "+str(test_case_num)+" test_num Failed")
+        print_test_result(test_case_num, val, "test_stats")
     except:
-        print("TestCase "+str(test_case_num)+" test_num Failed")
+        val = False
+        test_results.append(val)
+        print_test_result(test_case_num, val, "test_stats")
 
     test_case_num+=1
     val = test_data()
     test_results.append(val)
-    if val: print("TestCase "+str(test_case_num)+" test_num Passed")
-    else: print("TestCase "+str(test_case_num)+" test_num Failed")
+    print_test_result(test_case_num, val, "test_data")
 
     test_case_num+=1
     val = test_csv()
     test_results.append(val)
-    if val: print("TestCase "+str(test_case_num)+" test_num Passed")
-    else: print("TestCase "+str(test_case_num)+" test_num Failed")
+    print_test_result(test_case_num, val, "test_csv")
 
 
     number_of_tests = len(test_results)
