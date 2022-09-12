@@ -91,7 +91,6 @@ def csv(fname, fun, sep=','):
 
     # Read all the lines in the file sepearted by \n
     lines = file1.readlines()
-    import pdb; pdb.set_trace()
     # Loop through each line and split each line
     # using the seprator defined previously
     for line in lines:
