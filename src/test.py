@@ -2,6 +2,7 @@ import Sym
 import Num
 from utils import oo, populate_the
 import Data
+import os
 # import oo
 
 def test_the(the):
@@ -43,17 +44,15 @@ def func2(col):
     return col.mid()
 
 def test_stats():
-    data = Data("../data/auto93.csv")
-    print("xmid", data:stats(2, data.cols.x, func2)
-    print("xdiv", data:stats(3,data.cols.x, func1)
-    print("ymid", data:stats(2,data.cols.y, func2)
-    print("ydiv", data:stats(3,data.cols.y, func1)
+    path = os.path.join(os.path.dirname(__file__), '..', 'data', 'auto93.csv')
+    data = Data.Data(path)
+    print("xmid", data.stats(2, data.cols.x, func2))
+    print("xdiv", data.stats(3,data.cols.x, func1))
+    print("ymid", data.stats(2,data.cols.y, func2))
+    print("ydiv", data.stats(3,data.cols.y, func1))
     return True
 
-def run_tests(the):
-    test_case_num =1 
-    val = bignum()
-    if val: print("TestCase "+str(test_case_num)+" bignum Passed")
+
 def test_the():
     oo(the)
     return True
@@ -93,6 +92,13 @@ def run_tests(the):
     test_results.append(val)
     if val: print("TestCase "+str(test_case_num)+" test_the Passed")
     else: print("TestCase "+str(test_case_num)+" test_the Failed")
+
+
+    test_case_num+=1
+    val = test_stats()
+    test_results.append(val)
+    if val: print("TestCase "+str(test_case_num)+" test_num Passed")
+    else: print("TestCase "+str(test_case_num)+" test_num Failed")
 
     number_of_tests = len(test_results)
     for res in test_results:

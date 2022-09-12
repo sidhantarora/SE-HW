@@ -1,6 +1,5 @@
-import csv
 import Cols
-import rnd
+import utils
 import Row
 
 class Data:
@@ -8,20 +7,20 @@ class Data:
         self.cols = None
         self.rows = []
 
-        if type(src) == type("xyz"):
-            csv(src, lambda row : self.add(row))
+        if type(src) is str:
+            utils.csv(src, lambda row : self.add(row))
         else:
             for row in src:
                 self.add(row)
     
     def add(self, row):
         if not self.cols:
-            self.cols = Cols(row)
+            self.cols = Cols.Cols(row)
         else:
             if row.cells:
                 self.rows.append(row.cells)
             else:
-                self.rows.append(Row(row))
+                self.rows.append(Row.Row(row))
             for todo in self.cols:
                 for col in todo:
                     col.add(row.cells[col.at])
@@ -36,7 +35,7 @@ class Data:
         x = False
         for col in sc:
             v = func(col)
-            if type(v) == type(1) and rnd(v, places):
+            if type(v) == type(1) and utils.rnd(v, places):
                 x = True
                 t[col.name] = x
             else:
