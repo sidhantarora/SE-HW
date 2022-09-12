@@ -27,7 +27,7 @@ class Data:
             
 
     def stats(self, places, showCols, func):
-        import pdb; pdb.set_trace()
+        # import pdb; pdb.set_trace()
         sc = None
         if showCols:
             sc = showCols

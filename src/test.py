@@ -64,18 +64,14 @@ def func3(row):
 
 def test_csv():
     n=0
-    csv("../data/auto93.csv", func3); 
+    path = os.path.join(os.path.dirname(__file__), '..', 'data', 'auto93.csv')
+    csv(path, func3); 
     return True
 
 def run_tests(the):
     test_results = []
     passed_results = 0
     print("========= Starting test suite ===========")
-
-    test_results.append(test_sym())
-    test_results.append(test_num())
-    test_results.append(bignum())
-    test_results.append(test_the())
 
     test_case_num =1 
     val = bignum()
@@ -98,7 +94,7 @@ def run_tests(the):
     else: print("TestCase "+str(test_case_num)+" test_sym Failed")
 
     test_case_num+=1
-    val = test_the()
+    val = test_the(the)
     test_results.append(val)
     if val: print("TestCase "+str(test_case_num)+" test_the Passed")
     else: print("TestCase "+str(test_case_num)+" test_the Failed")
