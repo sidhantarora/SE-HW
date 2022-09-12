@@ -99,10 +99,9 @@ def csv(fname, fun, sep=','):
         line = line[:-1]
         splitLine = line.split(sep)
         for word in splitLine:
-            print(word)
             t[1 + len(t.keys())] = coerce(word)
-        import pdb; pdb.set_trace()
         fun(t)
+        print (t)
 
 def iItems(dictVar):
     tempDict = {}
