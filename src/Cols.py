@@ -8,11 +8,13 @@ class Cols:
         self.all = []
         self.klass = None
         self.x = []
+        self.x_names = []
+        self.eligible = []
         self.y = []
-
-        import pdb; pdb.set_trace()
-
+        self.y_names = []
+        self.skipped_items = []
         key = 0
+        self.eligible_names = []
         for key in names:
             obj = {}
             col_name = names[key]
@@ -27,9 +29,14 @@ class Cols:
                 is_dependent = col_name.endswith("+") or col_name.endswith("-")
                 if is_dependent:
                     self.y.append(obj)
+                    self.y_names.append(col_name)
                 else:
                     self.x.append(obj)
+                    self.x_names.append(col_name)
                 if col_name.endswith("!"):
                     self.klass = obj
+                self.eligible.append(obj)
+                self.eligible_names.append(col_name)
+            else:
+                self.eligible.append(None)
             key+=1
-        # import pdb; pdb.set_trace()

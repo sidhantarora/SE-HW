@@ -47,15 +47,15 @@ def test_stats():
     path = os.path.join(os.path.dirname(__file__), '..', 'data', 'auto93.csv')
     data = Data.Data(path)
     print("xmid", data.stats(2, data.cols.x, func2))
-    print("xdiv", data.stats(3,data.cols.x, func1))
-    print("ymid", data.stats(2,data.cols.y, func2))
-    print("ydiv", data.stats(3,data.cols.y, func1))
+    print("xdiv", data.stats(3, data.cols.x, func1))
+    print("ymid", data.stats(2, data.cols.y, func2))
+    print("ydiv", data.stats(3, data.cols.y, func1))
     return True
 
 def test_data():
     path = os.path.join(os.path.dirname(__file__), '..', 'data', 'auto93.csv')
     data = Data.Data(path)
-    for _,col in data.cols.y:
+    for col in data.cols.y_names:
         print (col)
     return True
 
@@ -139,8 +139,8 @@ def run_tests(the):
 
 if __name__=="__main__":
     the = populate_the()
-    # run_tests(the)
-    test_csv()
+    run_tests(the)
+    test_stats()
 
 
 
