@@ -2,7 +2,7 @@ import math
 from operator import truediv
 import sys
 import random
-import utils
+from . import utils
 
 class Num:
     def __init__(self, pos=0, colName=""):

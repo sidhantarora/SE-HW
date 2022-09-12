@@ -1,5 +1,4 @@
-import sys
-import utils
+from . import utils
 
 
 class Row:

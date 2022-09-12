@@ -1,5 +1,5 @@
-import Num
-import Sym
+from . import Num
+from . import Sym
 import re
 
 class Cols:
