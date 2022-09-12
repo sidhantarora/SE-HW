@@ -56,7 +56,7 @@ def test_data():
     path = os.path.join(os.path.dirname(__file__), '..', 'data', 'auto93.csv')
     data = Data.Data(path)
     for _,col in data.cols.y:
-        oo(col)
+        print (col)
     return True
 
 def func3(row):
@@ -139,8 +139,8 @@ def run_tests(the):
 
 if __name__=="__main__":
     the = populate_the()
-    run_tests(the)
-    test_stats()
+    # run_tests(the)
+    test_csv()
 
 
 
