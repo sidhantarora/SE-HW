@@ -1,7 +1,7 @@
 # Contributing to SE-HW
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-Follow the set of guidelines below to contribute to MyDollarBot-BOTGo!
+Follow the set of guidelines below to contribute to SE-HW!
 
 ## Code of Conduct
 All contributors should abide by the terms of the [code of conduct](CODE_OF_CONDUCT.md). Please read this carefully before contributing.
