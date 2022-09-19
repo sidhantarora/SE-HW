@@ -25,7 +25,13 @@ Tests Implemented:
 - bignum : replica of eg.bignum; tests if the num class follows the capacity 
 -  the : prints the cli options as in the lua source code.
 
-# How to run the tests?
+# Setting up git hooks
+We have moved the directory for git hooks to a separate directory called .githooks
+To enable this to be the new hooks directory, run the following command:
 
+git config --local core.hooksPath .githooks/
+
+
+# How to run the tests?
 in the root folder, run python3 -m test.test_csv
 
