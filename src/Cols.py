@@ -15,7 +15,6 @@ class Cols:
         self.skipped_items = []
         key = 0
         self.eligible_names = []
-        
         for key in names:
             obj = {}
             col_name = names[key]
