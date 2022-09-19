@@ -1,0 +1,12 @@
+language: python
+python:
+  - "3.8"
+install:
+  - pip install .
+  - pip install -r requirements.txt
+  - pip install coverage
+  - pip install codecov
+script:
+  python -m pytest & pylint code/
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t 04e35719-dd37-4888-9275-20d5c3ddc489
