@@ -12,3 +12,8 @@ echo $(coverage report -m)
 
 echo 'Test suite ended'
 echo '============================ End of coverage report =========================\n'
+
+
+cd docs
+python -m pydoc -w ../src/*
+echo 'Regenerated documentation'
