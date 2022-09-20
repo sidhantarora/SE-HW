@@ -1,10 +1,10 @@
 ### CSC 510 SE HW 
 
-
+[![Build Status](https://app.travis-ci.com/arvindsrinivas1/SE-HW.svg?branch=main)](https://app.travis-ci.com/github/arvindsrinivas1/SE-HW)
 [![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](https://github.com/sidhantarora/SE-HW/blob/main/README.md)
 <a href =https://github.com/sidhantarora/SE-HW/blob/main/LICENSE.md><img src=https://img.shields.io/github/license/sidhantarora/SE-HW></a>
 [![Github Repo size in bytes](https://img.shields.io/github/languages/code-size/sidhantarora/SE-HW)](https://github.com/sidhantarora/SE-HW)
-
+[![codecov](https://codecov.io/gh/arvindsrinivas1/SE-HW/branch/main/graph/badge.svg?token=J984S6M1HO)](https://codecov.io/gh/arvindsrinivas1/SE-HW)
 
 Contributors:
 - Vinita Ramnani (vjramnan)

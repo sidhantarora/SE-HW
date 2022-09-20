@@ -7,6 +7,6 @@ install:
   - pip install coverage
   - pip install codecov
 script:
-  python3 -m test.test_csv
+  coverage run -m test.test_csv
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t 04e35719-dd37-4888-9275-20d5c3ddc489
+  - bash <(curl -s https://codecov.io/bash) -t 034dc4a3-0afb-4961-92c1-182ba3c6dc5b
