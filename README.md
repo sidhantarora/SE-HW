@@ -31,6 +31,9 @@ Tests Implemented:
 - bignum : replica of eg.bignum; tests if the num class follows the capacity 
 -  the : prints the cli options as in the lua source code.
 
+# Document Generator
+We generate documentation as html files every time a commit is made. We have added it as part of our post-commit hook and it falls into the docs directory.
+
 # Setting up git hooks
 We have moved the directory for git hooks to a separate directory called .githooks
 To enable this to be the new hooks directory, run the following command:
