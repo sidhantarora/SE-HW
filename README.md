@@ -1,11 +1,17 @@
 ### CSC 510 SE HW 
 
+
+[![Documentation Status](https://readthedocs.org/projects/ansicolortags/badge/?version=latest)](https://github.com/sidhantarora/SE-HW/blob/main/README.md)
+<a href =https://github.com/sidhantarora/SE-HW/blob/main/LICENSE.md><img src=https://img.shields.io/github/license/sidhantarora/SE-HW></a>
+[![Github Repo size in bytes](https://img.shields.io/github/languages/code-size/sidhantarora/SE-HW)](https://github.com/sidhantarora/SE-HW)
+
+
 Contributors:
-- Vinita Ramnani
-- Sravanth Reddy Bomanna
-- Akash Sarda
-- Sidhant Arora
-- Arvind Srinivas Subramanian
+- Vinita Ramnani (vjramnan)
+- Sravanth Reddy Bommana (sbomman)
+- Akash Sarda (aksarda)
+- Sidhant Arora (sarora22)
+- Arvind Srinivas Subramanian (asubram9)
 
 Classes Implemented:
 - Sym : class to calculate mid (mode in symbolic data) and div for symbolic data
