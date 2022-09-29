@@ -15,5 +15,5 @@ echo '============================ End of coverage report ======================
 
 
 cd docs
-python -m pydoc -w ../src/*
+python -m pdoc ../src/* -o .
 echo 'Regenerated documentation'
