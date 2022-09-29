@@ -44,3 +44,6 @@ git config --local core.hooksPath .githooks/
 # How to run the tests?
 in the root folder, run python3 -m test.test_csv
 
+# Documentation
+The link for documentation deployed on github pages - https://sidhantarora.github.io/SE-HW/
+
