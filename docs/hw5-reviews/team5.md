@@ -4,7 +4,7 @@ Vinita Ramnani / vjramnan@ncsu.edu
 
 GitHub URL: [https://github.com/aadiltajani/CSC510-HW-GRP19](https://github.com/aadiltajani/CSC510-HW-GRP19/)
 
-|Notes|Assessment (Sum = 43)|Evidence|
+|Notes|Assessment (Sum = 38)|Evidence|
 |-----|----------|--------|
 |Video1|0|NA for HW|
 |Video2|0|NA for HW|
