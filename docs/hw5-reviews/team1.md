@@ -23,7 +23,7 @@ GitHub URL: [https://github.com/sankettangade/aGoodRepoSE](https://github.com/sa
 |Use of style checkers |1| code linting does not seem integrated|
 |Use of code formatters. |1|Code Lintiting does not seem integrated|
 |Use of syntax checkers. |1|Code Lintiting does not seem integrated|
-|Use of code coverage |2|SonarQube Analysis via GitHub actions but code-coverage not presented in README|
+|Use of code coverage |2|code-coverage not presented in README|
 |Other automated analysis tools|0|NA|
 |Test cases exist|3|Tests exists in test folder|
 |Test cases are routinely executed|3|yes https://github.com/sankettangade/aGoodRepoSE/actions|
@@ -31,8 +31,8 @@ GitHub URL: [https://github.com/sankettangade/aGoodRepoSE](https://github.com/sa
 |Issues are discussed before they are closed|3| Yes |
 |Chat channel: exists|0|NA|
 |Test cases: a large proportion of the issues related to handling failing cases.|1|No issues|
-|Evidence that the whole team is using the same tools: everyone can get to all tools and files|3|Everyone is committing and contributing throughout the code|
+|Evidence that the whole team is using the same tools: everyone can get to all tools and files|3|Contributions are throughout the code|
 |Evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|0|NA for this HW|
 |Evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3|Since tests are running, it would be good|
-|Evidence that the members of the team are working across multiple places in the code base|2|Well spread across contributions are noticed by commit history|
-|Short release cycles |1|Just one release found 20 days ago|
+|Evidence that the members of the team are working across multiple places in the code base|2|Commit history is good|
+|Short release cycles |1|Just one release found|
