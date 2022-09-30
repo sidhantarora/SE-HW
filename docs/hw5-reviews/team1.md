@@ -17,7 +17,7 @@ GitHub URL: [https://github.com/sankettangade/aGoodRepoSE](https://github.com/sa
 |Docs: doco generated, format not ugly |0|Can't find docs|
 |Docs: what: point descriptions of each class/function (in isolation) |0|Can't find docs|
 |Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|0|Can't find docs|
-|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|2|Well written README.md|
+|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|2|Well written [README.md](https://github.com/sankettangade/aGoodRepoSE)|
 |Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.|0|NA for this hw|
 |Use of version control tools|3|Using GitHub for version control|
 |Use of style checkers |1| code linting does not seem integrated|
@@ -27,7 +27,7 @@ GitHub URL: [https://github.com/sankettangade/aGoodRepoSE](https://github.com/sa
 |Other automated analysis tools|0|NA|
 |Test cases exist|3|Tests exists in test folder|
 |Test cases are routinely executed|3|yes https://github.com/sankettangade/aGoodRepoSE/actions|
-|The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|Yes contributing.md is descriptive|
+|The files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|Yes [contributing.md](https://github.com/sankettangade/aGoodRepoSE/blob/main/CONTRIBUTING.md) is descriptive|
 |Issues are discussed before they are closed|3| Yes |
 |Chat channel: exists|0|NA|
 |Test cases: a large proportion of the issues related to handling failing cases.|1|No issues|
